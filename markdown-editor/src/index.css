@@ -37,40 +37,10 @@
 @layer components {
   .markdown-body {
     @apply prose prose-sm max-w-none;
-    @apply prose-headings:font-semibold prose-headings:text-gray-900;
-    @apply prose-h1:text-3xl prose-h1:border-b prose-h1:pb-3;
-    @apply prose-h2:text-2xl prose-h2:border-b prose-h2:pb-2;
-    @apply prose-h3:text-xl;
-    @apply prose-p:text-gray-700 prose-p:leading-relaxed;
-    @apply prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline;
-    @apply prose-strong:text-gray-900 prose-strong:font-semibold;
-    @apply prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm;
-    @apply prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg;
-    @apply prose-pre:code:text-inherit prose-pre:code:bg-transparent prose-pre:code:p-0;
-    @apply prose-blockquote:border-l-4 prose-blockquote:border-primary-500 prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic;
-    @apply prose-img:rounded-lg prose-img:shadow-md;
-    @apply prose-table:w-full prose-table:border-collapse;
-    @apply prose-th:bg-gray-100 prose-th:font-semibold prose-th:text-left prose-th:p-3 prose-th:border;
-    @apply prose-td:p-3 prose-td:border prose-td:text-gray-700;
-    @apply prose-tr:nth-child(even):bg-gray-50;
-    @apply prose-ul:list-disc prose-ul:pl-5;
-    @apply prose-ol:list-decimal prose-ol:pl-5;
-    @apply prose-li:my-1;
-    @apply prose-hr:border-gray-200;
   }
   
   .markdown-body.dark {
     @apply prose-invert;
-    @apply prose-headings:text-gray-100;
-    @apply prose-p:text-gray-300;
-    @apply prose-a:text-primary-400;
-    @apply prose-strong:text-gray-100;
-    @apply prose-code:text-pink-400 prose-code:bg-gray-800;
-    @apply prose-pre:bg-gray-950;
-    @apply prose-blockquote:border-primary-400 prose-blockquote:bg-gray-800/50;
-    @apply prose-th:bg-gray-800 prose-th:text-gray-100;
-    @apply prose-td:text-gray-300;
-    @apply prose-tr:nth-child(even):bg-gray-800/50;
   }
   
   .btn {
