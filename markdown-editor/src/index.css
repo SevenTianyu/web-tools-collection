@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'highlight.js/styles/github.css';
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 bg-gray-50;
+  }
+  
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+}
+
+@layer components {
+  .markdown-body {
+    @apply prose prose-sm max-w-none;
+    @apply prose-headings:font-semibold prose-headings:text-gray-900;
+    @apply prose-h1:text-3xl prose-h1:border-b prose-h1:pb-3;
+    @apply prose-h2:text-2xl prose-h2:border-b prose-h2:pb-2;
+    @apply prose-h3:text-xl;
+    @apply prose-p:text-gray-700 prose-p:leading-relaxed;
+    @apply prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline;
+    @apply prose-strong:text-gray-900 prose-strong:font-semibold;
+    @apply prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm;
+    @apply prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg;
+    @apply prose-pre:code:text-inherit prose-pre:code:bg-transparent prose-pre:code:p-0;
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-primary-500 prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic;
+    @apply prose-img:rounded-lg prose-img:shadow-md;
+    @apply prose-table:w-full prose-table:border-collapse;
+    @apply prose-th:bg-gray-100 prose-th:font-semibold prose-th:text-left prose-th:p-3 prose-th:border;
+    @apply prose-td:p-3 prose-td:border prose-td:text-gray-700;
+    @apply prose-tr:nth-child(even):bg-gray-50;
+    @apply prose-ul:list-disc prose-ul:pl-5;
+    @apply prose-ol:list-decimal prose-ol:pl-5;
+    @apply prose-li:my-1;
+    @apply prose-hr:border-gray-200;
+  }
+  
+  .markdown-body.dark {
+    @apply prose-invert;
+    @apply prose-headings:text-gray-100;
+    @apply prose-p:text-gray-300;
+    @apply prose-a:text-primary-400;
+    @apply prose-strong:text-gray-100;
+    @apply prose-code:text-pink-400 prose-code:bg-gray-800;
+    @apply prose-pre:bg-gray-950;
+    @apply prose-blockquote:border-primary-400 prose-blockquote:bg-gray-800/50;
+    @apply prose-th:bg-gray-800 prose-th:text-gray-100;
+    @apply prose-td:text-gray-300;
+    @apply prose-tr:nth-child(even):bg-gray-800/50;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-ghost {
+    @apply btn bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+  
+  .input {
+    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  }
+  
+  .textarea {
+    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm resize-none;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-gray-100 hover:text-gray-900;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-primary-50 text-primary-700;
+  }
+  
+  .toolbar-btn {
+    @apply p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors;
+  }
+  
+  .divider {
+    @apply w-px h-6 bg-gray-200 mx-2;
+  }
+}
+
+/* Mind Map Styles */
+.mind-map-node {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mind-map-node:hover circle,
+.mind-map-node:hover rect {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+.mind-map-link {
+  fill: none;
+  stroke: #cbd5e1;
+  stroke-width: 2px;
+}
+
+/* Editor specific */
+.editor-textarea {
+  @apply w-full h-full p-6 font-mono text-sm leading-relaxed bg-white text-gray-800 resize-none border-0 focus:ring-0;
+  tab-size: 2;
+  -moz-tab-size: 2;
+}
+
+.editor-textarea:focus {
+  outline: none;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .markdown-body {
+    @apply prose-p:print:text-black;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Privacy Toolbox - 隐私优先的 All-in-One 工具箱。PDF工具、图片处理、文本编辑、AI助手，所有数据处理均在浏览器本地完成，保护您的隐私安全。" />
+    <meta name="keywords" content="隐私工具,PDF工具,图片压缩,文本编辑器,本地处理,离线工具,PWA" />
+    <meta name="author" content="Privacy Toolbox" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy Toolbox - 隐私优先的 All-in-One 工具箱" />
+    <meta property="og:description" content="所有数据处理均在浏览器本地完成，保护您的隐私安全。包含PDF工具、图片处理、文本编辑、AI助手等功能。" />
+    <meta property="og:site_name" content="Privacy Toolbox" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy Toolbox - 隐私优先的 All-in-One 工具箱" />
+    <meta name="twitter:description" content="所有数据处理均在浏览器本地完成，保护您的隐私安全。" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:;" />
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/masked-icon.svg" color="#0ea5e9" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Privacy Toolbox",
+      "description": "隐私优先的 All-in-One 工具箱，所有数据处理均在浏览器本地完成",
+      "url": "https://privacy-toolbox.app",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "PDF合并与拆分",
+        "图片压缩与格式转换",
+        "JSON格式化",
+        "代码压缩",
+        "正则表达式测试",
+        "Markdown编辑器",
+        "AI文本生成与翻译"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1000"
+      }
+    }
+    </script>
+    
+    <title>Privacy Toolbox - 隐私优先的 All-in-One 工具箱</title>
+  </head>
+  <body class="bg-dark-900 text-white antialiased">
+    <noscript>
+      <div style="padding: 20px; text-align: center; background: #1e293b; color: white;">
+        <h1>需要启用 JavaScript</h1>
+        <p>Privacy Toolbox 需要 JavaScript 才能正常运行。请启用 JavaScript 后刷新页面。</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

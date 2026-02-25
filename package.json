@@ -1,0 +1,37 @@
+{
+  "name": "web-tools-collection",
+  "version": "1.0.0",
+  "description": "A collection of 5 useful web tools with privacy-first design",
+  "private": true,
+  "workspaces": [
+    "privacy-toolbox",
+    "ai-tools-nav",
+    "markdown-editor",
+    "batch-image-processor",
+    "dev-toolkit"
+  ],
+  "scripts": {
+    "dev:privacy": "cd privacy-toolbox && npm run dev",
+    "dev:ai": "cd ai-tools-nav && npm run dev",
+    "dev:markdown": "cd markdown-editor && npm run dev",
+    "dev:image": "cd batch-image-processor && npm run dev",
+    "dev:devkit": "cd dev-toolkit && npm run dev",
+    "build:all": "npm run build --workspaces",
+    "install:all": "npm install --workspaces"
+  },
+  "keywords": [
+    "web-tools",
+    "privacy-first",
+    "pdf-tools",
+    "image-tools",
+    "ai-tools",
+    "markdown-editor",
+    "developer-tools"
+  ],
+  "author": "SevenTianyu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SevenTianyu/web-tools-collection.git"
+  }
+}

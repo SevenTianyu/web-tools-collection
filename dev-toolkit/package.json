@@ -1,0 +1,53 @@
+{
+  "name": "dev-toolkit",
+  "version": "1.0.0",
+  "description": "Developer Tools Online - JSON Formatter, Regex Tester, Base64 Decode, and more",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
+    "@monaco-editor/react": "^4.6.0",
+    "monaco-editor": "^0.45.0",
+    "sql-formatter": "^15.0.0",
+    "js-beautify": "^1.15.0",
+    "uglify-js": "^3.17.4",
+    "js-yaml": "^4.1.0",
+    "xml-js": "^1.6.11",
+    "jose": "^5.2.0",
+    "lucide-react": "^0.294.0",
+    "uuid": "^9.0.1",
+    "cron-parser": "^4.9.0",
+    "cronstrue": "^2.47.0",
+    "date-fns": "^3.0.0",
+    "classnames": "^2.5.0",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/js-beautify": "^1.14.3",
+    "@types/uglify-js": "^3.17.4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/uuid": "^9.0.7",
+    "@types/crypto-js": "^4.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-pwa": "^0.17.4",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5"
+  }
+}
